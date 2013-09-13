@@ -6,12 +6,12 @@ Requirements:
 
 Add something like this to your Django settings:
 
-CROWD_AUTH = {
-    'AppName': 'foo',
-    'AppPassword': 'bar',
-    'URL': 'https://crowd.example.com/rest/usermanagement/1/authentication',
-}
+    CROWD_AUTH = {
+        'AppName': 'foo',
+        'AppPassword': 'bar',
+        'URL': 'https://crowd.example.com/rest/usermanagement/1/authentication',
+    }
 
 How to test:
 
-  python manage.py test
+    python manage.py test
