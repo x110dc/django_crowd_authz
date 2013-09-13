@@ -40,7 +40,6 @@ class CrowdBackend(object):
         except Exception as e:
             logger.error(str(e))
             return None
-
         params = {'username': self.username}
         data = json.dumps({'value': self.password})
         headers = {
@@ -88,9 +87,9 @@ class CrowdBackend(object):
                 user.is_staff = False
                 user.is_superuser = False
                 try:
+                    user.email = crowd_user['email']
                     user.first_name = crowd_user['first-name']
                     user.last_name = crowd_user['last-name']
-                    user.email = crowd_user['email']
                 except KeyError:
                     pass
                 user.save()
