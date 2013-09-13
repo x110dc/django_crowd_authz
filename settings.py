@@ -140,6 +140,11 @@ INSTALLED_APPS = (
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
+NOSE_ARGS = ['--with-coverage',
+        '--cover-package=crowd_backend.auth.backends',
+        '--cover-html',
+        ]
+
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 # A sample logging configuration. The only tangible logging
