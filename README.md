@@ -1,3 +1,8 @@
+django_crowd_authz
+==================
+
+Crowd authentication backend for Django
+
 tested with python 2.7.5 and Django 1.5.3
 
 Requirements:
@@ -15,3 +20,5 @@ Add something like this to your Django settings:
 How to test:
 
     python manage.py test
+
+
