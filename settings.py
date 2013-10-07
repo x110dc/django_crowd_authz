@@ -6,9 +6,9 @@ AUTHENTICATION_BACKENDS = (
 )
 
 CROWD_AUTH = {
-        'AppName': 'foo',
-        'AppPassword': 'bar',
-        'URL': 'baz',
+    'AppName': 'foo',
+    'AppPassword': 'bar',
+    'URL': 'baz',
 }
 
 DEBUG = True
@@ -22,12 +22,16 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'test',                      # Or path to database file if using sqlite3.
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',
+        # Or path to database file if using sqlite3.
+        'NAME': 'test',
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        # Empty for localhost through domain sockets or '127.0.0.1' for
+        # localhost through TCP.
+        'HOST': '',
         'PORT': '',                      # Set to empty string for default.
     }
 }
@@ -90,7 +94,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -100,7 +104,7 @@ SECRET_KEY = 'k&uovpk(pbll79gz#ztu)^$12yh&5gb851defe8q00mfgt0ox7'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -141,9 +145,9 @@ INSTALLED_APPS = (
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 NOSE_ARGS = ['--with-coverage',
-        '--cover-package=crowd_backend.auth.backends',
-        '--cover-html',
-        ]
+             '--cover-package=crowd_backend.auth.backends',
+             '--cover-html',
+             ]
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
