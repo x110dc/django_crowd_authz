@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_nose',
+    'auth',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -145,8 +146,9 @@ INSTALLED_APPS = (
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 NOSE_ARGS = ['--with-coverage',
-             '--cover-package=crowd_backend.auth.backends',
+             '--cover-package=auth',
              '--cover-html',
+             'tests.py',
              ]
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
