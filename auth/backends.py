@@ -3,7 +3,7 @@ import logging
 
 import requests
 from django.conf import settings
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 logger = logging.getLogger(__name__)
 
@@ -80,6 +80,7 @@ class CrowdBackend(object):
 
         if crowd_user:
             try:
+                User = get_user_model()
                 user = User.objects.get(username=username)
             except User.DoesNotExist:
                 user = User(username=username)
@@ -100,6 +101,7 @@ class CrowdBackend(object):
 
     def get_user(self, user_id):
         try:
+            User = get_user_model()
             return User.objects.get(pk=user_id)
         except User.DoesNotExist:
             return None

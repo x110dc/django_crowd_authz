@@ -1,7 +1,7 @@
 import json
 import logging
 import requests
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from mock import patch
 from auth.backends import CrowdBackend
@@ -48,7 +48,7 @@ class TestCrowdBackend(TestCase):
                     log_test))
 
             self.assertEqual('kraken.mckraken', user.username)
-            self.assertIsInstance(user, User)
+            self.assertIsInstance(user, get_user_model())
             self.assertEqual('kraken.mckraken@example.com', user.email)
 
 
