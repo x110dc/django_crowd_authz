@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='django_crowd_authz',
-      version='1.0',
+      version='1.0.1',
       description='Crowd Authentication for Django',
       author='Daniel Craigmile',
       author_email='danielc@pobox.com',
